@@ -44,7 +44,7 @@ app.post("/api/saveipfsimage", function(req, res){
    // var testBuffer = req.body.image;
   console.log(image);
   //Reading file from computer
-  let testBuffer = new Buffer(image);
+  let testBuffer = Buffer.from(image);
   ipfs.files.add(testBuffer, function (err, file) {
       if (err) {
           res.json({ message: "error",  ipfshash: ''});
