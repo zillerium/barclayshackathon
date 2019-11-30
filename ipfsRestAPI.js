@@ -22,6 +22,8 @@ app.get("/api/ping", function(req, res){
   res.json({ messaage: "pong" });
 });
 
+app.use(express.static(path.join(__dirname, 'html')));
+
 //app.use((req, res) => {
 //	res.send('Hello there !');
 //});

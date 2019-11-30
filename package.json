@@ -1,0 +1,25 @@
+{
+  "name": "barclayshackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ipfsRestAPI.js",
+  "scripts": {
+    "start": "node ./ipfsRestAPI.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zillerium/barclayshackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zillerium/barclayshackathon/issues"
+  },
+  "homepage": "https://github.com/zillerium/barclayshackathon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-wget": "^0.4.3",
+    "pg": "^7.14.0"
+  }
+}
