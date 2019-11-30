@@ -36,23 +36,21 @@ app.use(function(req, res, next){
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 // add token acceptance here.
 // get token from blockchain and check against sending token from rest api call
 app.post("/api/saveipfsimage", function(req, res){
-     var imagename = req.body.imagename;
+     var image = req.body.image;
    // var testBuffer = req.body.image;
-      console.log(imagename);
-    //Reading file from computer
-    let testFile = fs.readFileSync(imagename);
-    //Creating buffer for ipfs function to add file to the system
-    let testBuffer = new Buffer(testFile);
-    ipfs.files.add(testBuffer, function (err, file) {
-        if (err) {
-           res.json({ message: "error",  ipfshash: ''});
-        }
-        res.json({ message: "Correct",  ipfshash: file});
-    })
+  console.log(image);
+  //Reading file from computer
+  let testBuffer = new Buffer(image);
+  ipfs.files.add(testBuffer, function (err, file) {
+      if (err) {
+          res.json({ message: "error",  ipfshash: ''});
+      }
+      res.json({ message: "Correct",  ipfshash: file});
+  })
 });
 
 app.post("/api/readipfsimage", function(req, res){
