@@ -1,14 +1,19 @@
 <html>
+
+<button id="activatActivateCamera">Activate Camera</button>
+
 <video id="video" width="640" height="480" autoplay></video>
 <button id="snap">Snap Photo</button>
 <canvas id="canvas" width="640" height="480"></canvas>
 <p id="filesInfo"/>
 
 <script>
+
 // Grab elements, create settings, etc.
 var video = document.getElementById('video');
 
-// Get access to the camera!
+document.getElementById("activatActivateCamera").addEventListener("click", function() {
+    // Get access to the camera!
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now
     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
@@ -21,7 +26,6 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 // Elements for taking the snapshot
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
-var video = document.getElementById('video');
 
 // Trigger photo take
 document.getElementById("snap").addEventListener("click", function() {
@@ -40,6 +44,7 @@ document.getElementById("snap").addEventListener("click", function() {
   xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   var data = 'image=' + dataURL;
   xhr.send(data);
+});
 });
 </script>
 
