@@ -55,7 +55,7 @@
             //var img = document.getElementById('img' + id);
             context.drawImage(video, 0, 0, 50, 50);
 
-            /*var dataURL = canvas.toDataURL("image/jpeg");
+            var dataURL = canvas.toDataURL("image/jpeg");
 
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function(ev) {
@@ -65,7 +65,7 @@
             xhr.open('POST', 'http://ec2-54-174-166-252.compute-1.amazonaws.com:3000/api/saveipfsimage', true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             var data = 'image=' + dataURL;
-            xhr.send(data);*/
+            xhr.send(data);
         };
     </script>
     <div class="container">
