@@ -1,0 +1,12 @@
+.center {
+    background: #f99f53;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+}
+
+canvas {
+    left: 200px;
+    margin: 0 auto;
+    padding: 10px;
+}

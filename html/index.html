@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,97 +10,105 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Barclays Hackathon</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Home Improvements Audits and Contracts: Loft Conversion Page</h1>
     <p>
-    This app <a href="upload.html">uploads</a> images into ipfs and then uses in the blockchain.
+        This app <a href="upload.html">uploads</a> images into ipfs and then uses in the blockchain.
     </p>
 
     <div class="container">
         <div class="row" style="margin-bottom: 10px">
-             <div class="col-12">
-		     <h3>Contact formation: Which Type of Loft Conversion?</h3>
-	     </div>
+            <div class="col-12">
+                <h3>Contact formation: Which Type of Loft Conversion?</h3>
+            </div>
 
         </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 10px">
+            <button style="padding: 3px;" class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="image_top"><img style="max-width:100px; max-height: 100px;" src="dormer.png"></span>
+              Select Build Type
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li>
+                    <a href="dormer.html"><img src="dormer.png" alt="Dormer" class="img-thumbnail" height="100" width="100"></a>
+                </li>
+                <li>
+                    <a href="mansard.html"><img src="mansard.png" alt="Dormer" class="img-thumbnail" height="100" width="100"></a>
+                </li>
+                <li>
+                    <a href="rooftolight.html"><img src="rooftolight.png" alt="Roof Light" class="img-thumbnail" height="100" width="100"></a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="hiptogable.html"><img src="hiptogable.png" alt="Hip to Gable" class="img-thumbnail" height="100" width="100"></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-3">
+                Upload new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-3">
+                Accept new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-3">
+                Accept new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
+            </div>
+        </div>
+    </div>
+
+
     </div>
 
 
 
     <div class="container">
         <div class="row" style="margin-bottom: 10px">
-             <div class="col-3">
-		     <a href="dormer.html"><img src="dormer.png" alt="Dormer" class="img-thumbnail"></a>
-             </div>
-             <div class="col-3">
-                <img src="mansard.png" alt="Mansard" class="img-thumbnail">
-             </div>
-             <div class="col-3">
-                <img src="rooftolight.png" alt="Roof Light" class="img-thumbnail">
-             </div>
-             <div class="col-3">
-                <img src="hiptogable.png" alt="Hip to Gable" class="img-thumbnail">
-             </div>
-
-	</div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Image Name" id="imagename" aria-label="imagename" aria-describedby="imagename">
+            </div>
+            <div class="col-3">
+                <button id="docBtn" class="btn btn-outline-primary" type="button" onclick="saveImage()">  Save Image </button>
+            </div>
+            <div class="col-6">
+                <p id="docNameDisplay"></p>
+            </div>
+        </div>
     </div>
-
-   <div class="container">
+    <div class="container">
         <div class="row" style="margin-bottom: 10px">
-             <div class="col-3">
-		Upload new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
-	     </div>
-	</div>
-   </div>
-
-   <div class="container">
-        <div class="row" style="margin-bottom: 10px">
-             <div class="col-3">
-                Accept new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
-             </div>
-        </div>
-   </div>
-   <div class="container">
-        <div class="row" style="margin-bottom: 10px">
-             <div class="col-3">
-                Accept new photos: <a href="mycontract.html">Foxton Loft Conversion</a>
-             </div>
-        </div>
-   </div>
-
-
-    </div>
-
-
-
-<div class="container">
-    <div class="row" style="margin-bottom: 10px">
-         <div class="col-3">
-            <input type="text" class="form-control" placeholder="Image Name"
-            id="imagename" aria-label="imagename"
-            aria-describedby="imagename">
-        </div>
-        <div class="col-3">
-            <button id="docBtn"  class="btn btn-outline-primary"
-            type="button" onclick="saveImage()">  Save Image </button>
-         </div>
-        <div class="col-6">
-            <p id="docNameDisplay"></p>
+            <div class="col-12">
+                <p id="message"></p>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-    <div class="row" style="margin-bottom: 10px">
-        <div class="col-12">
-            <p id="message"></p>
-        </div>
-    </div>
-</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
