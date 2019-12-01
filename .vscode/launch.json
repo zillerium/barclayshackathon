@@ -11,7 +11,8 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/ipfsRestAPI.js"
+            "program": "${workspaceFolder}/ipfsRestAPI.js",
+            "env": {"DEBUG":"*"}
         }
     ]
 }
