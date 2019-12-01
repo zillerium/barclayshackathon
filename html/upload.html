@@ -40,7 +40,7 @@ document.getElementById("snap").addEventListener("click", function() {
       document.getElementById('filesInfo').innerHTML = 'Done!';
   };
 
-  xhr.open('POST', '/api/saveipfsimage', true);
+  xhr.open('POST', 'http://ec2-54-174-166-252.compute-1.amazonaws.com:3000/api/saveipfsimage', true);
   xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   var data = 'image=' + dataURL;
   xhr.send(data);
